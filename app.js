@@ -1,65 +1,50 @@
-const inputfields = document.querySelector('.input-fields')
-const output = document.querySelector('.output')
+(function($) {
+  "use strict"; // Start of use strict
 
-let inputShow = true
-
-
-async function TextEditor(element){
-  const newEditor =  await ClassicEditor
-  .create(element,{
-    toolbar: [ 'heading', 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' ],
-  } )
-  return newEditor
- 
-}
-
-let workExpdetails;
-TextEditor(inputfields["workexp"]).then(nEditor=>{
-  workExpdetails = nEditor
-})
-let Academic;
-TextEditor(inputfields["academics"]).then(nEditor=>{
-  Academic = nEditor
-})
-
-
-
-function toggle(){
-    if(inputShow){
-         inputfields.style.display = "none"
-         inputShow = false 
-         output.innerHTML=`
-           <div class="hero">
-            <h1>${inputfields["name"].value}</h1>
-            <h3>${inputfields["title"].value}</h3>
-           </div>
-           <div class="main">
-               <div>
-                 <h2>OBJECTIVE</h2>
-                 <p>${inputfields["objective"].value}</p>
-                 <h2>SKILLS</h2>
-                 <p>${inputfields["skills"].value}</p>
-                 <h2>ACHIEVEMENTS</h2>
-                 <p>${inputfields["achievements"].value}</p>
-                 <h2>CONTACT</h2>
-                 <p>${inputfields["contact"].value}</p>
-               </div>
-               <div>
-                <h2>WORK EXPERIENCE</h2>
-                ${workExpdetails.getData()}
-                <h2>ACEMEDIC DETAILS</h2>
-                 ${Academic.getData()}
-                <h2>PROJECTS</h2>
-                <p>${inputfields["projects"].value}</p>
-               </div>
-           </div>
-           <div class="btn">
-              <button onclick="print()">Print Resume</button>
-        </div>
-         `
-    }else{
-        inputfields.style.display =  "block"
-        inputShow = true
-        output.innerHTML=""
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top - 54)
+        }, 1000, "easeInOutExpo");
+        return false;
+      }
     }
-}
+  });
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 54
+  });
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("navbar-shrink");
+    } else {
+      $("#mainNav").removeClass("navbar-shrink");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+  // Hide navbar when modals trigger
+  $('.portfolio-modal').on('show.bs.modal', function(e) {
+    $(".navbar").addClass("d-none");
+  })
+  $('.portfolio-modal').on('hidden.bs.modal', function(e) {
+    $(".navbar").removeClass("d-none");
+  })
+
+})(jQuery); // End of use strict
