@@ -1,348 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Gowhar Yousuf</title>
-
-   <link rel="stylesheet" href="style.css">
-
-    <!-- Custom fonts for this template -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title> Responsive Portfolio Website | Gowhar Yousuf </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=0bad425def976' async='true'></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
 </head>
 
-<body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Gowhar yousuf</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                  <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <!-- Move to up button -->
+    
+    <div class="scroll-button">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- navgaition menu -->
+    <script>
+        window.onload = function () {
+          lax.init()
+      
+          // Add a driver that we use to control our animations
+          lax.addDriver('scrollY', function () {
+            return window.scrollY
+          })
+      
+          // Add animation bindings to elements
+          lax.addElements('.lax', {
+            scrollY: {
+              translateX: [
+                ["elInY", "elCenterx", "elOutX"],
+                [0, 'screenWidth/2', 'screenWidth'],
+              ]
+            }
+          })
+        }
+      </script>
+    <nav class="" data-aos="fade-right">
+        <div class="navbar hidden " >
+            <div class="logo">
+                <a href="#">Gowhar Yousuf</a>
             </div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </ul>
+            <div class="media-icons">
+                <a href="https://www.facebook.com/gowhar.yousuf.98"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/gowhar-yousuf-3705b3214/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.link/wi3pi0"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
         </div>
     </nav>
-    <!-- Header -->
-    <header class="masthead">
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Gowhar Yousuf</div>
-                <div class="intro-heading text-uppercase">Wanna Know More About Me?</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Scroll Down</a>
-            </div>
-        </div>
-    </header>
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <div class="row">
-                    <div class="section-subheading text-muted col-md-8">Goal-oriented Web Developer brings strong commitment to collaboration and solutions-oriented problem-solving. Use various web design packages to develop custom-crafted, customer-focused websites and designs. Committed to high standards of user experience, usability and speed over more than 2 years for multiple users. Lends detailed knowledge of SEO to increase visibility.Newly graduated software engineer with degree in computer science (BCA). Strong communication and problem-solving skills. Looking for position with highly regarded organization that values dedication and attention to detail. Innovative individual with proven success evaluating requirements for software development projects to design innovative solutions. Out-of-the-box thinker and problem solver dedicated to improving performance. Works well in teams and consistently delivers to deadlines.
-                  </div>
-                    
-                  <div class="col-md-4"><img class="picself img-thumbnail"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-                    <h4 class="service-heading">Website Design and Development</h4>
-                    <p class="text-muted">This involves designing and creating websites from scratch or redesigning existing ones. It includes aspects such as layout design, user interface (UI) and user experience (UX) design, coding, and programming.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-                    <h4 class="service-heading">Front End Development</h4>
-                    <p class="text-muted">Front-end development focuses on the client-side of web development, dealing with the visual and interactive elements of a website. It involves implementing designs using HTML, CSS, and JavaScript to ensure a responsive and user-friendly interface.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-line-chart fa-stack-1x fa-inverse"></i>
-            </span>
-                    <h4 class="service-heading">Website Maintenance and Support</h4>
-                    <p class="text-muted">Once a website is launched, it requires ongoing maintenance, security updates, bug fixes, and technical support. Web development services often include these post-launch activities to ensure the website functions smoothly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="https://gowhar-cv.netlify.app/Images/backgroundimage.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4> My Portfolio</h4>
-                        <p class="text-muted">Front End Development</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="https://www.mdpi.com/applsci/applsci-10-05988/article_deploy/html/images/applsci-10-05988-g002.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Hand written Digit Recognizer</h4>
-                        <p class="text-muted">Python,Machine learning,Gradio UI</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQywqwKGpqELarQCFKLVKepHyFqkDZRjY6KUQ&usqp=CAU" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Resume Builder Website</h4>
-                        <p class="text-muted">HTML, JS, CSS,Bootstrap</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Hire Me</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form id="contactForm" name="sentMessage" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Design & Modified by Gowhar Yousuf</span>
-                </div>
-                <div class="col-md-4">
-                    <span class="copyright">Copy Right Reserved @ 2023</span>
-                </div>
-                <!-- <div class="col-md-4">Find Me on Social Media</div> -->
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                            <a target='_blank' href="https://www.facebook.com/gowhar.yousuf.98">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target='_blank' href="https://github.com/GowharYousuf">
-                  <i class="fa fa-github"></i>
-                </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target='_blank' href="https://www.linkedin.com/in/gowhar-yousuf-3705b3214/">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target='_blank' href="https://api.whatsapp.com/send?phone=917889946574&text=%F0%9F%91%8DHi%20Gowhar%20">
-                  <i class="fa fa-whatsapp"></i>
-                </a>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-    </footer>
-    <!-- Portfolio Modals -->
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">My Personal Portfolio</h2>
-                                <p class="item-intro text-muted">HTML,Css,JavaScript,PHP</p>
-                                <img class="img-fluid d-block mx-auto" src="https://gowhar-cv.netlify.app/Images/backgroundimage.jpg" alt="">
-                                <p></p>
-                                <a class="btn btn-primary" target='_blank' href="https://gowhar-cv.netlify.app">Go to Check It</a>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">hand written Digit Recognizer</h2>
-                                <p class="item-intro text-muted">O</p>
-                                <img class="img-fluid d-block mx-auto" src="https://www.mdpi.com/applsci/applsci-10-05988/article_deploy/html/images/applsci-10-05988-g002.png" alt="">
-                                <p>In this project, I coordinated with other developers to modified the front end of the website. Did some debugging and UI.</p>
-                                <a class="btn btn-primary" target='_blank' href="https://github.com/GowharYousuf/HandWritten-Digit-Recognizer">Go to Check It</a>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Resume Builder Website</h2>
-                                <p class="item-intro text-muted">Coded in JavaScript,HTML,CSS</p>
-                                <img class="img-fluid d-block mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQywqwKGpqELarQCFKLVKepHyFqkDZRjY6KUQ&usqp=CAU" alt="">
-                                <p>A cute pet flex panel with some inspirational words.</p>
-                                    <a class="btn btn-primary" target='_blank' href="https://resumebuilderbygowhar.netlify.app/">Go to Check It</a>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
+    <!-- Home Section Start -->
+    <section class="home   lax lax_preset_seesaw:140:20 lax_preset_zigzag:170:200" id="home">
+        <div class="home-content">
+            <div class="text">
+                <div class="text-two">Hello,</div>
+                <div class="text-two">I'm Gowhar Yousuf</div>
+                <div class="text-three">Web Developer</div>
+                <div class="text-three">From Jammu And Kashmir</div>
+            </div>
+            <div class="button">
+                <a href="mailto:gowharyousuf820@gmail.com"><button>Hire Me</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section Start -->
+    <section class="about" id="about" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+        <div class="content">
+            <div class="title"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+                    <img src="images/about-me-image.jpg" class="img-div" alt="">
+                </div>
+                <div class="right" data-aos="fade-left" aos-duration="2000">
+                    <div class="topic home" style="color:crimson;">Designing Is My Passion</div>
+                    <p data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">Goal-oriented Web Developer brings strong commitment to collaboration and solutions-oriented problem-solving. Use various web design packages to develop custom-crafted, customer-focused websites and designs. Committed to high standards
+                        of user experience, usability and speed over more than 2 years for multiple users. Lends detailed knowledge of SEO to increase visibility.Newly graduated software engineer with degree in computer science (BCA). Strong communication
+                        and problem-solving skills. Looking for position with highly regarded organization that values dedication and attention to detail. Innovative individual with proven success evaluating requirements for software development projects
+                        to design innovative solutions. Out-of-the-box thinker and problem solver dedicated to improving performance. Works well in teams and consistently delivers to deadlines.</p>
+                    <div class="button">
+                        <a href="https://drive.google.com/file/d/183SVXWXkNJVDs5EONtuVC8jUB2o_EgKx/view?usp=sharing"><button>Download My CV</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Skill Section Start -->
+    <!-- Section Tag and Other Div will same where we need to put same CSS -->
+
+    <section class="skills" id="skills ">
+        <div class="content">
+            <div class="title"><span>My Skills</span></div>
+            <div class="skills-details">
+                <div class="text">
+                    <div class="topic" style="color:crimson">Skills Reflecting My Knowledge</div>
+                    <p>Experienced Web Developer with passion for creating attractive and interactive websites meeting customer needs and exceeding expectations. Well-versed in developing custom WordPress themes and plugins. Excels in HTML, CSS, JavaScript,SEO,Python,Good
+                        Knowledge of programming tools like VS Code, SQL workbench, Xampp Control Panel , GIT and Responsive development.</p>
+                    <div class="experience">
+                        <div class="num">1</div>
+                        <div class="exp">Year Of <br>Experience</div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic">HTML</div>
+                        <div class="per animate__animated animate__swing animate__delay-4s">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">CSS</div>
+                        <div class="per animate__animated animate__swing animate__delay-4s">80%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">JavScript</div>
+                        <div class="per animate__animated animate__swing animate__delay-4s">70%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Python</div>
+                        <div class="per animate__animated animate__swing animate__delay-4s">60%</div>
+
+                    </div>
+                    <div class="box">
+                        <div class="topic">DBMS</div>
+                        <div class="per animate__animated animate__swing animate__delay-4s">60%</div>
+
+                    </div>
+                    <div class="box">
+                        <div class="topic">Responsive Web Designing</div>
+                        <div class="per animate__animated animate__swing animate__delay-4s">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Services Section Start -->
+    <section class="services" id="services ">
+        <div class="content">
+            <div class="title"><span>My Services</span></div>
+            <div class="boxes" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+                <div class="box"  data-aos="flip-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Website Design and Development</div>
+                    <p> This involves designing and creating websites from scratch or redesigning existing ones. It includes aspects such as layout design, user interface (UI) and user experience (UX) design, coding, and programming.</p>
+                </div>
+                <div class="box" data-aos="flip-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Front-end Development</div>
+                    <p>Front-end development focuses on the client-side of web development, dealing with the visual and interactive elements of a website. It involves implementing designs using HTML, CSS, and JavaScript to ensure a responsive and user-friendly
+                        interface.
+                    </p>
+                </div>
+                <div class="box" data-aos="flip-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="topic">Mobile-Friendly Development</div>
+                    <p>With the increasing use of mobile devices, web development services often include ensuring websites are optimized for mobile responsiveness and compatibility across various screen sizes and devices.</p>
+                </div>
+                <div class="box" data-aos="flip-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="topic">Website Maintenance and Support</div>
+                    <p>Once a website is launched, it requires ongoing maintenance, security updates, bug fixes, and technical support. Web development services often include these post-launch activities to ensure the website functions smoothly.</p>
+                </div>
+                <div class="box" data-aos="flip-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="topic">Search Engine Optimization (SEO)</div>
+                    <p>SEO services aim to improve a website's visibility in search engine results, driving organic traffic and increasing its online presence. This includes keyword research, on-page optimization, link building, and content strategy.</p>
+                </div>
+                <div class="box" data-aos="flip-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="topic">A/B Testing and Analytics</div>
+                    <p>A/B testing involves creating different versions of a web page and measuring user interactions to determine which design elements and features are more effective. Analytics tools track user behavior and provide insights for further
+                        optimization and refinement of the interactive design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Me section Start -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title"><span>Contact Me</span></div>
+            <div class="text">
+                <div class="topic">Have Any Project?</div>
+                <p>Thank you for visiting my website! If you have any questions, inquiries, or project ideas, I would be delighted to hear from you<br> Whether you need a new website, assistance with web development, or want to discuss a potential collaboration,
+                    I am here to help. I have a passion for creating engaging and user-friendly web experiences, and I am dedicated to delivering high-quality results that meet your specific requirements. If you prefer, you can also connect with me through
+                    my social media profiles</p>
+                <div class="button">
+                    <a href="https://wa.link/wi3pi0"><button>Let's Chat</button></a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section Start -->
+        <footer>
+            <ul class="icons">
+                <li>
+                    <a href="https://wa.link/wi3pi0">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/gowhar-yousuf-3705b3214/">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/gowhar.yousuf.98">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/GowharYousuf">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="footer-copyright">
+                <p>Designed And Maintained By Gowhar Yousuf</p>
+                <p>Copyright @ 2022 All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Get Callback from us</h2>
+        <form action="popup-contact.php">
+            <input type="text" name="contact" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Id" required>
+            <!-- <button type="submit" class="btn-enter" onclick="">Submit</button> -->
+            <button type="submit" class="btn-enter" name="formSubmit" value="Submit">Submit</button>
+        </form>
+    </div>
+    <!--Script-->
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            setTimeout(
+                function open(event) {
+                    document.querySelector(".popup").style.display = "block";
+                },
+                1000
+            )
+        });
+
+
+        document.querySelector("#close").addEventListener("click", function() {
+            document.querySelector(".popup").style.display = "none";
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
